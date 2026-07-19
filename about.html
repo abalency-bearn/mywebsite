@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0908;color:#efece7;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:inherit}
+  @keyframes omFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .om-in{animation:omFade .7s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
+  .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
+  .homemark{color:rgba(239,236,231,.4);transition:color .4s ease}
+  .homemark:hover{color:rgba(239,236,231,.92)}
+  .act{display:inline-block;transition:transform .85s cubic-bezier(.16,.8,.28,1)}
+  .act:hover{transform:translateY(-7px)}
+  .clink{border-bottom:1px solid rgba(239,236,231,.35);padding-bottom:2px;transition:border-color .3s ease}
+  .clink:hover{border-color:#efece7}
+</style>
+</helmet>
+<div style="min-height:100vh;padding:56px 56px 96px">
+  <!-- header -->
+  <div style="display:flex;justify-content:space-between;align-items:baseline">
+    <a class="homemark" href="index.html" style="display:inline-block;padding:12px 16px;margin:-12px -16px;font-size:20px;font-weight:600;letter-spacing:.02em;text-transform:uppercase">Andrea Balency-Béarn</a>
+    <nav class="cap" style="display:flex;gap:30px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(239,236,231,.78)">
+      <a class="act" href="about.html">About / Contact</a>
+      <a class="act" href="https://www.instagram.com/andreabalencybearn/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+
+  <!-- title -->
+  <div class="om-in" style="margin-top:110px;margin-bottom:64px;display:flex;align-items:center;gap:0">
+    <div class="tv" style="font-size:34px;font-weight:600;letter-spacing:-.015em;text-transform:uppercase;line-height:.98;flex:none">About / Contact</div>
+    <div style="flex:1;display:flex;align-items:center;margin-left:-20px">
+      <svg width="156" height="16" viewBox="0 0 156 16" fill="none" style="display:block;overflow:visible">
+        <path d="M2 8 L40 5.5 L78 7.4 L116 5.8 L154 7.8 L116 7.8 L78 9.8 L40 7.7 Z" fill="#efece7" fill-opacity="0.82"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="om-in" style="animation-delay:.1s;display:grid;grid-template-columns:1.2fr 0.8fr;gap:90px;max-width:1200px;align-items:start">
+    <div>
+    <!-- about -->
+    <div style="font-size:16px;line-height:1.72;color:rgba(239,236,231,.9);text-wrap:pretty">
+      <p style="margin-bottom:20px">Andrea Balency-Béarn is a French-Mexican composer, performer and researcher based in London.</p>
+      <p style="margin-bottom:20px">Born in Paris and raised in Mexico City, she works in the fields of live performance, fixed media, dance, film and multimedia. She has worked with outstanding ensembles including the Riot Ensemble, Plus-Minus Ensemble, Nash Ensemble, the Royal Academy of Music and New Movement Collective, and her work has been recorded and performed internationally.</p>
+      <p style="margin-bottom:20px">She is a doctoral researcher and lecturer at the Royal Academy of Music in London, where her work investigates how compositional boundaries shape emergent phenomena in pieces for acoustic instruments and real-time electronics.</p>
+      <p style="margin-bottom:20px">As a film composer, she has scored feature films and TV series for Netflix, Amazon Studios and the BBC. Her latest scores include <span style="font-style:italic">Dust</span>, directed by Anke Blondé, which premiered in Competition at the Berlinale and was nominated for the Golden Bear, and <span style="font-style:italic">On the Road</span>, which won the Orizzonti Award for Best Film at the Venice Film Festival.</p>
+      <p>She also performs in the UK electronic / alternative rock band Mount Kimbie.</p>
+    </div>
+    <!-- contact -->
+    <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:56px;margin-top:52px">
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,236,231,.45);margin-bottom:10px">Management</div>
+        <div style="font-size:16px;letter-spacing:.02em;margin-bottom:6px">Hamish Duff — First Artists Management</div>
+        <a class="clink" href="mailto:hduff@famagency.com" style="font-size:16px;letter-spacing:.02em">hduff@famagency.com</a>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,236,231,.45);margin-bottom:10px">Instagram</div>
+        <a class="clink" href="https://www.instagram.com/andreabalencybearn/" target="_blank" rel="noopener" style="font-size:16px;letter-spacing:.02em">@andreabalencybearn</a>
+      </div>
+    </div>
+    </div>
+    <!-- portrait -->
+    <div>
+      <img src="assets/portrait.jpg" alt="Andrea Balency-Béarn" style="display:block;width:100%;height:auto;box-shadow:0 18px 44px rgba(0,0,0,.45)">
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
