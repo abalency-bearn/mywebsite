@@ -22,6 +22,14 @@
   .act:hover{transform:translateY(-7px)}
   @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
   .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
+
+  @media (max-width:768px){
+    .home-name{left:20px!important;top:18px!important}
+    .home-name a{font-size:29px!important}
+    .home-nav{right:20px!important;top:20px!important;flex-direction:column!important;align-items:flex-end!important;gap:10px!important;text-align:right!important}
+    .home-actions{grid-template-columns:1fr!important;left:20px!important;right:20px!important;bottom:24px!important;gap:0!important}
+    .home-actions a{text-align:left!important;font-size:17px!important;padding:12px 0!important}
+  }
 </style>
 </helmet>
 <div class="om-frame" style="position:relative;width:100vw;height:100vh;overflow:hidden;background:#0a0908;color:#efece7">
@@ -29,17 +37,17 @@
   <video src="assets/hero2.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;opacity:0;transition:opacity 1.4s ease"></video>
   <div style="position:absolute;inset:0;background:{{ overlayFade }}"></div>
   <!-- name -->
-  <div style="position:absolute;left:22px;top:16px">
+  <div class="home-name" style="position:absolute;left:22px;top:16px">
     <a class="tv" href="index.html" style="display:inline-block;font-size:40px;font-weight:600;letter-spacing:{{ nameTracking }};line-height:1.1;text-transform:uppercase">Andrea<br>Balency-Béarn</a>
   </div>
   <!-- top-right utility nav -->
-  <nav class="cap" style="position:absolute;right:56px;top:60px;display:flex;gap:30px;font-size:12px;font-weight:500;letter-spacing:{{ labelTracking }};text-transform:uppercase;color:rgba(239,236,231,.78)">
+  <nav class="cap home-nav" style="position:absolute;right:56px;top:60px;display:flex;gap:30px;font-size:12px;font-weight:500;letter-spacing:{{ labelTracking }};text-transform:uppercase;color:rgba(239,236,231,.78)">
     <a class="act" href="about.html">About / Contact</a>
     <a class="act" href="https://www.instagram.com/andreabalencybearn/" target="_blank" rel="noopener">Instagram</a>
   </nav>
   <!-- three options along the bottom -->
-  <div style="position:absolute;left:56px;right:56px;bottom:46px;display:grid;grid-template-columns:1fr 1fr 1fr">
-    <a class="act tv" href="film.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Film Scores</a>
+  <div class="home-actions" style="position:absolute;left:56px;right:56px;bottom:46px;display:grid;grid-template-columns:1fr 1fr 1fr">
+    <a class="act tv" href="film.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Film Music</a>
     <a class="act tv" href="concert.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Concert Music / Live Works</a>
     <a class="act tv" href="https://mountkimbie.warp.net/" target="_blank" rel="noopener" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Mount Kimbie</a>
   </div>
