@@ -31,6 +31,7 @@
   @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
   .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
   .cap{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14)}
+  .pagehead nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
   .pframe{position:relative;display:inline-block;line-height:0}
   .pop{position:absolute;inset:0;display:flex;flex-direction:column;gap:22px;align-items:flex-start;justify-content:flex-start;padding:60px 32px;opacity:0;transition:opacity .45s ease;background:rgba(8,7,6,.55)}
   .poster:hover .pop{opacity:1}
@@ -41,11 +42,12 @@
     .hbr{display:block!important;width:0!important;height:0!important;overflow:hidden!important}
     .page{padding:26px 20px 64px!important}
     .pagehead{gap:14px!important}
-    .pagehead .homemark{font-size:24px!important}
-    .pagehead nav{gap:16px!important;font-size:11px!important}
+    .pagehead .homemark{font-size:30px!important}
+    .pagehead nav{display:none!important}
+    .pagefoot{display:block!important}
     .om-in.shelf{margin-top:0!important}
     .pagetitle{font-size:24px!important}
-    .shelf{gap:40px!important}
+    .shelf{gap:66px!important}
     .poster{width:100%!important;max-width:360px;display:flex!important;flex-direction:column!important}
     .poster .pframe{display:contents!important}
     .pop{order:3!important}
@@ -68,7 +70,7 @@
   </div>
 
   <!-- title -->
-  <div class="om-in" style="margin-top:110px;margin-bottom:64px;display:flex;align-items:center;gap:0">
+  <div class="om-in" style="margin-top:72px;margin-bottom:64px;display:flex;align-items:center;gap:0">
     <div class="tv pagetitle" style="font-size:34px;font-weight:600;letter-spacing:-.015em;text-transform:uppercase;line-height:.98;flex:none">Film Music</div>
     <div style="flex:1;display:flex;align-items:center;margin-left:-20px">
       <svg width="78" height="16" viewBox="0 0 78 16" fill="none" style="display:block;overflow:visible">
@@ -156,6 +158,12 @@
     </div>
   </div>
 </div>
+  <div class="pagefoot" style="display:none;padding:0 20px 48px;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(239,236,231,.78);text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)">
+    <div style="border-top:1px solid rgba(239,236,231,.14);padding-top:24px;display:flex;gap:30px">
+      <a class="act" href="about.html">About / Contact</a>
+      <a class="act" href="https://www.instagram.com/andreabalencybearn/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
 </x-dc>
 </body>
 </html>

@@ -22,15 +22,16 @@
   .act:hover{transform:translateY(-7px)}
   @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
   .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
+  .home-nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
 
-  .mbr{display:none}
   @media (max-width:768px){
-    .mbr{display:inline!important}
+    .mbr{display:block!important;width:0!important;height:0!important;overflow:hidden!important}
     .om-frame{height:100svh!important}
     .home-name{left:20px!important;top:18px!important}
     .home-name a{font-size:27px!important}
     .home-nav{top:50%!important;bottom:auto!important;right:20px!important;transform:translateY(-50%)!important;flex-direction:column!important;align-items:flex-end!important;gap:8px!important;text-align:right!important}
     .home-nav a{line-height:1.2!important}
+    .home-nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)!important}
     .home-actions{grid-template-columns:1fr!important;left:20px!important;right:20px!important;bottom:28px!important;gap:0!important}
     .home-actions a{text-align:left!important;font-size:17px!important;padding:11px 0!important}
   }
@@ -52,7 +53,7 @@
   <!-- three options along the bottom -->
   <div class="home-actions" style="position:absolute;left:56px;right:56px;bottom:46px;display:grid;grid-template-columns:1fr 1fr 1fr">
     <a class="act tv" href="film.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Film Music</a>
-    <a class="act tv" href="concert.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Concert Music /<br class="mbr">Live Works</a>
+    <a class="act tv" href="concert.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Concert Music /<span class="mbr"> </span>Live Works</a>
     <a class="act tv" href="https://mountkimbie.warp.net/" target="_blank" rel="noopener" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Mount Kimbie</a>
   </div>
 </div>
