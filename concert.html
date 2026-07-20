@@ -34,13 +34,15 @@
   .cap{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14)}
   .pagehead nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
   .pframe{position:relative;display:inline-block;line-height:0}
-  .pop{position:absolute;inset:0;display:flex;flex-direction:column;gap:22px;align-items:flex-start;justify-content:flex-start;padding:60px 44px;opacity:0;transition:opacity .45s ease;background:rgba(8,7,6,.55)}
+  .pop{position:absolute;inset:0;display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:flex-start;padding:48px 44px;opacity:0;transition:opacity .45s ease;background:rgba(8,7,6,.82);overflow:auto}
   .poster:hover .pop{opacity:1}
   .popbtn{color:#efece7;font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:letter-spacing .3s ease}
   .popbtn:hover{letter-spacing:.26em}
+  .popinfo{line-height:1.45}
 
   @media (max-width:768px){
     .mbrk{display:inline!important}
+    .popinfo{display:none!important}
     .mbr{display:block!important;width:0!important;height:0!important;overflow:hidden!important}
     .page{padding:26px 20px 64px!important}
     .pagehead{gap:14px!important}
@@ -88,20 +90,20 @@
   <!-- work shelf -->
   <div class="om-in shelf" style="animation-delay:.1s;display:flex;flex-wrap:wrap;gap:56px 44px;align-items:flex-start;justify-content:flex-start">
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/mappings.jpg" alt="Mappings" style="display:block;width:100%;height:100%;object-fit:cover"></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/mappings.jpg" alt="Mappings" style="display:block;width:100%;height:100%;object-fit:cover"></div><div class="pop"><div class="popinfo" style="margin-top:0;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">Mappings · 2026</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for ensemble &amp; electronics</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">written for Plus-Minus Ensemble</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Café Oto, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">MAPPINGS re-creates 3 different spaces — my bedroom in London, my grandmother’s dining room and my mother’s studio in Mexico City, all documented through images and field recordings. The ensemble, distorted and expanded by digital processes, reconstructs these places acoustically, mapping the field recordings to instrumental material. As the mappings become increasingly inaccurate, the work questions notions of territory, control, belonging, and distance in an era where digital representation mediates our experience of place.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Mappings <span style="color:rgba(239,236,231,.5)">· 2026</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for ensemble &amp; electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Mappings <span style="color:rgba(239,236,231,.5)">· 2026</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for ensemble &amp; electronics</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">23′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Plus-Minus Ensemble</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Café Oto, London</div>
       </div>
     </div>
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/rets-ii.jpg" alt="RETS II" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%"></div><div class="pop"><a class="popbtn" href="https://www.youtube.com/watch?v=pVBGHShugeQ&list=RDpVBGHShugeQ&start_radio=1" target="_blank" rel="noopener">Listen</a></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/rets-ii.jpg" alt="RETS II" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%"></div><div class="pop"><a class="popbtn" href="https://www.youtube.com/watch?v=pVBGHShugeQ&list=RDpVBGHShugeQ&start_radio=1" target="_blank" rel="noopener">Listen</a><div class="popinfo" style="margin-top:20px;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">RETS I / II · 2025</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for bass clarinet & electronics / for mezzo-soprano & electronics</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">premiered by Heather Roche / Lotte Betts-Dean</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Angela Burgess Recital Hall, RAM, London / Kings Place, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">RETS I and II are solo instrument and electronics pieces where acoustic instruments, electronics and a graphic interface called IanniX, which also functions as a score, are made interdependent through a custom-built network of feedback cycles and comparators. I built these networks with resonance in mind, which sits in a delicate balance between being contained and spinning out of control, depending on how the performer interacts with the score.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">RETS I / II <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for bass clarinet &amp; electronics / for mezzo-soprano &amp; electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">RETS I / II <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for bass clarinet &amp; electronics / for mezzo-soprano &amp; electronics</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">3′ / 7′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Heather Roche / Lotte Betts-Dean</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Angela Burgess Recital Hall, RAM, London / Kings Place, London</div>
@@ -111,8 +113,8 @@
     <div class="poster" style="display:block;width:720px">
       <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/elsewhere.png" alt="Elsewhere is a Negative Mirror" style="display:block;width:100%;height:100%;object-fit:cover"></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Elsewhere is a Negative Mirror <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for violin &amp; electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Elsewhere is a Negative Mirror <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for violin &amp; electronics</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Roan Ma</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Lichtenbergschule, Darmstadt</div>
       </div>
@@ -122,8 +124,8 @@
     <div class="poster" style="display:block;width:720px">
       <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/als-ich-khan.png" alt="Als Ich Khan" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 82%"></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Als Ich Khan <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">double concerto — electric guitar, violin & electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Als Ich Khan <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">double concerto — electric guitar, violin & electronics</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Riot Ensemble & AML scholars</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Duke’s Hall, RAM, London</div>
       </div>
@@ -133,48 +135,48 @@
     <div class="poster" style="display:block;width:720px">
       <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/limen.jpg" alt="Limen" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%"></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Limen <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for toy piano & electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Limen <span style="color:rgba(239,236,231,.5)">· 2025</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for toy piano & electronics</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Yshani Perinpanayagam</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Firth Hall, Sheffield</div>
       </div>
     </div>
     -->
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/substrata.jpg" alt="Substrata" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 76%"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/substrata-for-amplified-mezzo-and-chamber-orchestra" target="_blank" rel="noopener">Listen</a></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/substrata.jpg" alt="Substrata" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 76%"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/substrata-for-amplified-mezzo-and-chamber-orchestra" target="_blank" rel="noopener">Listen</a><div class="popinfo" style="margin-top:20px;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">Substrata · 2024</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for amplified mezzo-soprano & large ensemble</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">premiered by Manson Ensemble, cond. Tim Weiss</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Duke’s Hall, RAM, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">Substrata is an exploration of mapping distinct vocal textures to the orchestra in a journey which goes from unvoiced sounds, such as breathing, all the way to vocalising and singing. It also investigates creative ways of amplifying instruments to create an organic blend between acoustic and amplified sound.<br><br>Substrata was written with the generous support of The Jane Manning – Anthony Payne Award.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Substrata <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for amplified mezzo-soprano & large ensemble</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Substrata <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for amplified mezzo-soprano & large ensemble</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">12′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Manson Ensemble, cond. Tim Weiss</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Duke’s Hall, RAM, London</div>
       </div>
     </div>
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/shoji.jpg" alt="Shoji" style="display:block;width:100%;height:100%;object-fit:cover"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/shoji-for-4-percussionists-and-a-rice-paper-door-1" target="_blank" rel="noopener">Listen</a></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/shoji.jpg" alt="Shoji" style="display:block;width:100%;height:100%;object-fit:cover"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/shoji-for-4-percussionists-and-a-rice-paper-door-1" target="_blank" rel="noopener">Listen</a><div class="popinfo" style="margin-top:20px;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">Shoji · 2024</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for 4 amplified percussionists & rice-paper door</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">choreography by Kai Tomioka</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Central School of Ballet, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">Shoji grew out of a collaboration with Japanese dance choreographer Kai Tomioka, built around the gesture of sliding. For this piece, I built a Japanese sliding door to be played as an instrument, with the custom-designed rice paper panels allowing for a variety of hand gestures to reproduce sliding and drumming sounds. The instrument doesn’t just make sounds; it shapes how the music is thought and played.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Shoji <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for 4 amplified percussionists & rice-paper door</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Shoji <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for 4 amplified percussionists & rice-paper door</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">8′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">choreography by Kai Tomioka</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Central School of Ballet, London</div>
       </div>
     </div>
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/appels.jpg" alt="Appels" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 58%"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/appels-woolwich-works" target="_blank" rel="noopener">Listen</a></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/appels.jpg" alt="Appels" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 58%"></div><div class="pop"><a class="popbtn" href="https://soundcloud.com/andrea-balency-bearn/appels-woolwich-works" target="_blank" rel="noopener">Listen</a><div class="popinfo" style="margin-top:20px;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">Appels · 2024</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for 4 grand pianos, 7 percussionists & electronics</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">premiered by New Movement Collective</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Woolwich Works, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">Appels was commissioned by New Movement Collective as a response to Stravinsky’s Les Noces. Using the same instrumentation (minus voices), the piece looks at Les Noces’ ending bell sound from different perspectives, distorting acoustic sound with electronics and questioning the identity of the piano as an instrument.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Appels <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for 4 grand pianos, 7 percussionists & electronics</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">Appels <span style="color:rgba(239,236,231,.5)">· 2024</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for 4 grand pianos, 7 percussionists & electronics</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">11′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by New Movement Collective</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Woolwich Works, London</div>
       </div>
     </div>
     <div class="poster" style="display:block;width:720px">
-      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/piano-etudes.jpg" alt="3 Piano Etudes" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%"></div><div class="pop"><a class="popbtn" href="https://www.youtube.com/watch?v=Wgriuyai_r4&list=RDWgriuyai_r4&start_radio=1" target="_blank" rel="noopener">Watch</a></div></div>
+      <div class="pframe" style="width:720px"><div class="cbox" style="width:720px;height:405px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.45)"><img src="assets/concert/piano-etudes.jpg" alt="3 Piano Etudes" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%"></div><div class="pop"><a class="popbtn" href="https://www.youtube.com/watch?v=Wgriuyai_r4&list=RDWgriuyai_r4&start_radio=1" target="_blank" rel="noopener">Watch</a><div class="popinfo" style="margin-top:20px;max-width:560px"><div style="font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#efece7">3 Piano Etudes · 2023</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,236,231,.72);margin-top:8px">for solo piano</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:6px">premiered by Joseph Havlat</div><div style="font-size:12px;letter-spacing:.02em;color:rgba(239,236,231,.62);margin-top:2px">Angela Burgess Recital Hall, RAM, London</div><p style="font-size:13px;line-height:1.6;color:rgba(239,236,231,.78);margin-top:14px">These three etudes explore the glissando technique, using different approaches to showcase the full potential of the instrument.</p></div></div></div>
       <div class="wcap" style="opacity:.82;transition:opacity .4s ease;margin-top:16px">
-        <div style="font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">3 Piano Etudes <span style="color:rgba(239,236,231,.5)">· 2023</span></div>
-        <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for solo piano</div>
+        <div style="font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.85)">3 Piano Etudes <span style="color:rgba(239,236,231,.5)">· 2023</span></div>
+        <div style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62);margin-top:5px">for solo piano</div>
         <div style="font-size:13px;letter-spacing:.06em;color:rgba(239,236,231,.5);margin-top:5px">10′</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.55);margin-top:3px">premiered by Joseph Havlat</div>
         <div style="font-size:13px;letter-spacing:.04em;color:rgba(239,236,231,.5);margin-top:2px">Angela Burgess Recital Hall, RAM, London</div>
