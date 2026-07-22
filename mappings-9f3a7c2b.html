@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0908;color:#efece7;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:inherit}
+  .noselect{-webkit-user-select:none;user-select:none}
+  @keyframes omFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .om-in{animation:omFade .7s cubic-bezier(.2,.7,.2,1) both}
+  .act{display:inline-block;padding:10px 4px;margin:-10px -4px;transition:transform .85s cubic-bezier(.16,.8,.28,1)}
+  .act:hover{transform:translateY(-7px)}
+  .homemark{color:rgba(239,236,231,.4);transition:color .4s ease}
+  .homemark:hover{color:rgba(239,236,231,.92)}
+  .mbrk{display:none}
+  @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
+  .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
+  .pagehead nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
+  .trk{display:grid;grid-template-columns:46px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-top:1px solid rgba(239,236,231,.12)}
+  .trk:last-child{border-bottom:1px solid rgba(239,236,231,.12)}
+  .playbtn{width:46px;height:46px;border:1px solid rgba(239,236,231,.4);border-radius:50%;background:none;color:#efece7;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .35s ease,background .35s ease,transform .35s ease;flex:none}
+  .playbtn:hover{border-color:rgba(239,236,231,.9);transform:scale(1.06)}
+  .playbtn.playing{background:rgba(239,236,231,.92);color:#0a0908;border-color:rgba(239,236,231,.92)}
+  .playbtn svg{display:block}
+  .bar{position:relative;height:3px;background:rgba(239,236,231,.16);cursor:pointer;margin-top:12px}
+  .bar-hit{position:relative;padding:10px 0;margin:-10px 0;cursor:pointer}
+  .fill{position:absolute;left:0;top:0;height:100%;width:0;background:rgba(239,236,231,.85)}
+  .knob{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;background:#efece7;transform:translate(-50%,-50%);left:0;opacity:0;transition:opacity .3s ease}
+  .bar-hit:hover .knob{opacity:1}
+  .videowrap{position:relative;width:100%;max-width:1120px;aspect-ratio:16/9;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}
+  .videowrap video{display:block;width:100%;height:100%;object-fit:cover}
+  .vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(8,7,6,.28);border:none;cursor:pointer;transition:opacity .4s ease,background .4s ease;padding:0}
+  .vplay:hover{background:rgba(8,7,6,.12)}
+  .vplay.hidden{opacity:0;pointer-events:none}
+  .vplay .disc{width:92px;height:92px;border-radius:50%;background:rgba(239,236,231,.92);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .vplay:hover .disc{transform:scale(1.08)}
+  @media (max-width:768px){
+    .mbrk{display:inline!important}
+    .page{padding:26px 20px 64px!important}
+    .pagehead .homemark{font-size:27px!important;letter-spacing:.05em!important;line-height:1.1!important;white-space:nowrap!important}
+    .pagehead{flex-wrap:wrap!important}
+    .privlink{width:100%!important;text-align:left!important;margin-top:32px!important}
+    .pagehead nav{display:none!important}
+    .pagetitle{font-size:30px!important;line-height:1.04!important}
+    .trk{grid-template-columns:44px 1fr!important;gap:14px!important;padding:18px 0!important}
+    .trk-time{grid-column:1 / 3!important;grid-row:2!important;margin-top:2px!important}
+    .trknum{font-size:13px!important}
+  }
+</style>
+</helmet>
+<div class="page noselect" style="min-height:100vh;padding:56px 56px 96px">
+  <div class="pagehead" style="display:flex;justify-content:space-between;align-items:baseline">
+    <a class="homemark" href="/" style="display:inline-block;padding:12px 16px;margin:-12px -16px;font-size:20px;font-weight:600;letter-spacing:.02em;text-transform:uppercase">Andrea <br class="mbrk">Balency-Béarn</a>
+    <div class="privlink" style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,236,231,.4)">(Private link)</div>
+  </div>
+
+  <div class="om-in" style="margin-top:72px;margin-bottom:14px;display:flex;align-items:center;gap:0">
+    <div class="tv pagetitle" style="font-size:30px;font-weight:600;letter-spacing:-.015em;text-transform:uppercase;line-height:.98;flex:none">Mappings</div>
+    <div style="flex:1;display:flex;align-items:center;margin-left:-14px">
+      <svg width="60" height="14" viewBox="0 0 60 14" fill="none" style="display:block;overflow:visible">
+        <path d="M2 7 L20 5 L40 6.4 L58 6.4 L40 7.6 L20 6.9 Z" fill="#efece7" fill-opacity="0.82"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="om-in" style="animation-delay:.05s;font-size:13px;line-height:1.7;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62)">For ensemble &amp; electronics<br>Performed by Plus-Minus Ensemble<br>2026<br>Recorded at Empire Broadcasting Corporation</div>
+
+  <div class="om-in" style="animation-delay:.12s;margin-top:56px;margin-bottom:16px;font-size:15px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.8)">Performance Film</div>
+  <div class="om-in" style="animation-delay:.14s">
+    <div class="videowrap">
+      <video controls controlsList="nodownload noplaybackrate noremoteplayback" disablePictureInPicture disableRemotePlayback preload="auto" playsinline src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/Mappings_compressed.mp4#t=0.1"></video>
+      <button class="vplay" aria-label="Play video"><span class="disc"><svg width="30" height="34" viewBox="0 0 30 34" fill="#0a0908"><path d="M2 2 L28 17 L2 32 Z"></path></svg></span></button>
+    </div>
+  </div>
+
+  <div class="om-in" style="animation-delay:.2s;margin-top:72px;margin-bottom:16px;font-size:15px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.8)">Studio Recording</div>
+
+  <div class="om-in" style="animation-delay:.26s;max-width:900px" id="pitch-tracks">
+    <div class="trk" data-i="0">
+      <button class="playbtn" aria-label="Play"></button>
+      <div class="trk-main">
+        <div class="trktitle" style="font-size:18px;font-weight:500;letter-spacing:.04em;color:rgba(239,236,231,.92)">Mappings 01</div>
+        <div class="bar-hit"><div class="bar"><div class="fill"></div><div class="knob"></div></div></div>
+      </div>
+      <div class="trk-time" style="font-size:12px;letter-spacing:.04em;color:rgba(239,236,231,.5);font-variant-numeric:tabular-nums;white-space:nowrap">0:00 / 0:00</div>
+      <audio preload="metadata" src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/Mappings%2001.mp3"></audio>
+    </div>
+    <div class="trk" data-i="1">
+      <button class="playbtn" aria-label="Play"></button>
+      <div class="trk-main">
+        <div class="trktitle" style="font-size:18px;font-weight:500;letter-spacing:.04em;color:rgba(239,236,231,.92)">Mappings 02</div>
+        <div class="bar-hit"><div class="bar"><div class="fill"></div><div class="knob"></div></div></div>
+      </div>
+      <div class="trk-time" style="font-size:12px;letter-spacing:.04em;color:rgba(239,236,231,.5);font-variant-numeric:tabular-nums;white-space:nowrap">0:00 / 0:00</div>
+      <audio preload="metadata" src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/Mappings%2002.mp3"></audio>
+    </div>
+    <div class="trk" data-i="2">
+      <button class="playbtn" aria-label="Play"></button>
+      <div class="trk-main">
+        <div class="trktitle" style="font-size:18px;font-weight:500;letter-spacing:.04em;color:rgba(239,236,231,.92)">Mappings 03</div>
+        <div class="bar-hit"><div class="bar"><div class="fill"></div><div class="knob"></div></div></div>
+      </div>
+      <div class="trk-time" style="font-size:12px;letter-spacing:.04em;color:rgba(239,236,231,.5);font-variant-numeric:tabular-nums;white-space:nowrap">0:00 / 0:00</div>
+      <audio preload="metadata" src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/mappings%2003.mp3"></audio>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._noSave = (e) => { e.preventDefault(); return false; };
+    document.addEventListener('contextmenu', this._noSave);
+    document.addEventListener('dragstart', this._noSave);
+    document.querySelectorAll('.videowrap video, #pitch-tracks audio').forEach(m => {
+      m.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
+      m.setAttribute('oncontextmenu', 'return false');
+      m.draggable = false;
+    });
+
+    const PLAY = '<svg width="15" height="16" viewBox="0 0 15 16" fill="currentColor"><path d="M2 1.6 L13 8 L2 14.4 Z"/></svg>';
+    const PAUSE = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor"><rect x="1" y="0" width="4" height="15"/><rect x="8" y="0" width="4" height="15"/></svg>';
+    const fmt = (t) => {
+      if (!isFinite(t) || t < 0) t = 0;
+      const m = Math.floor(t / 60), s = Math.floor(t % 60);
+      return m + ':' + (s < 10 ? '0' : '') + s;
+    };
+
+    const vid = document.querySelector('.videowrap video');
+    const vplay = document.querySelector('.vplay');
+    if (vid && vplay) {
+      vid.removeAttribute('controls');
+      const show = () => vplay.classList.remove('hidden');
+      const hide = () => vplay.classList.add('hidden');
+      vplay.addEventListener('click', () => { vid.setAttribute('controls',''); vid.play().catch(() => {}); });
+      vid.addEventListener('play', hide);
+      vid.addEventListener('pause', show);
+      vid.addEventListener('ended', () => { vid.removeAttribute('controls'); show(); });
+    }
+
+    this._audios = [];
+    document.querySelectorAll('#pitch-tracks .trk').forEach(row => {
+      const audio = row.querySelector('audio');
+      const btn = row.querySelector('.playbtn');
+      const fill = row.querySelector('.fill');
+      const knob = row.querySelector('.knob');
+      const hit = row.querySelector('.bar-hit');
+      const time = row.querySelector('.trk-time');
+      this._audios.push(audio);
+      btn.innerHTML = PLAY;
+
+      const setDur = () => { time.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration); };
+      audio.addEventListener('loadedmetadata', setDur);
+      setDur();
+
+      btn.addEventListener('click', () => {
+        if (audio.paused) { this._audios.forEach(a => { if (a !== audio) a.pause(); }); audio.play().catch(() => {}); }
+        else audio.pause();
+      });
+      audio.addEventListener('play', () => { btn.innerHTML = PAUSE; btn.classList.add('playing'); });
+      audio.addEventListener('pause', () => { btn.innerHTML = PLAY; btn.classList.remove('playing'); });
+      audio.addEventListener('ended', () => { btn.innerHTML = PLAY; btn.classList.remove('playing'); });
+      audio.addEventListener('timeupdate', () => {
+        const p = audio.duration ? (audio.currentTime / audio.duration) : 0;
+        fill.style.width = (p * 100) + '%';
+        knob.style.left = (p * 100) + '%';
+        time.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+      });
+      const seek = (e) => {
+        const bar = hit.querySelector('.bar');
+        const r = bar.getBoundingClientRect();
+        const x = Math.min(Math.max((e.clientX - r.left) / r.width, 0), 1);
+        if (audio.duration) audio.currentTime = x * audio.duration;
+      };
+      hit.addEventListener('click', seek);
+    });
+  }
+  componentWillUnmount() {
+    document.removeEventListener('contextmenu', this._noSave);
+    document.removeEventListener('dragstart', this._noSave);
+    if (this._audios) this._audios.forEach(a => a.pause());
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
