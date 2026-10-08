@@ -25,6 +25,8 @@
   .homemark{color:rgba(239,236,231,.4);transition:color .4s ease}
   .homemark:hover{color:rgba(239,236,231,.92)}
   .mbrk{display:none}
+  .ytlink{display:inline-block;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(239,236,231,.88);border-bottom:1px solid rgba(239,236,231,.3);padding-bottom:3px;transition:transform .55s cubic-bezier(.16,.8,.28,1),color .3s ease,border-color .3s ease;text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
+  .ytlink:hover{transform:translateX(6px);color:#efece7;border-color:rgba(239,236,231,.75)}
   @keyframes tvFlicker{0%,100%{opacity:1}7%{opacity:.97}8%{opacity:.72}9%{opacity:.96}10%{opacity:.85}11%{opacity:1}49%{opacity:1}50%{opacity:.9}51%{opacity:1}80%{opacity:.99}81%{opacity:.68}82%{opacity:.94}83%{opacity:1}}
   .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
   .pagehead nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
@@ -39,7 +41,7 @@
   .fill{position:absolute;left:0;top:0;height:100%;width:0;background:rgba(239,236,231,.85)}
   .knob{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;background:#efece7;transform:translate(-50%,-50%);left:0;opacity:0;transition:opacity .3s ease}
   .bar-hit:hover .knob{opacity:1}
-  .videowrap{position:relative;width:100%;max-width:1120px;aspect-ratio:16/9;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}
+  .videowrap{position:relative;width:100%;max-width:none;aspect-ratio:16/9;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}
   .videowrap video{display:block;width:100%;height:100%;object-fit:cover}
   .vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(8,7,6,.28);border:none;cursor:pointer;transition:opacity .4s ease,background .4s ease;padding:0}
   .vplay:hover{background:rgba(8,7,6,.12)}
@@ -53,7 +55,7 @@
     .pagehead{flex-wrap:wrap!important}
     .privlink{width:100%!important;text-align:left!important;margin-top:32px!important}
     .pagehead nav{display:none!important}
-    .pagetitle{font-size:30px!important;line-height:1.04!important}
+    .pagetitle{font-size:20px!important;line-height:1.04!important}
     .trk{grid-template-columns:44px 1fr!important;gap:14px!important;padding:18px 0!important}
     .trk-time{grid-column:1 / 3!important;grid-row:2!important;margin-top:2px!important}
     .trknum{font-size:13px!important}
@@ -62,32 +64,26 @@
 </helmet>
 <div class="page noselect" style="min-height:100vh;padding:56px 56px 96px">
   <div class="pagehead" style="display:flex;justify-content:space-between;align-items:baseline">
-    <a class="homemark" href="/" style="display:inline-block;padding:12px 16px;margin:-12px -16px;font-size:20px;font-weight:600;letter-spacing:.02em;text-transform:uppercase">Andrea <br class="mbrk">Balency-Béarn</a>
+    <a class="homemark" href="index.html" style="display:inline-block;padding:12px 16px;margin:-12px -16px;font-size:20px;font-weight:600;letter-spacing:.02em;text-transform:uppercase">Andrea <br class="mbrk">Balency-Béarn</a>
     <div class="privlink" style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,236,231,.4)">(Private link)</div>
   </div>
 
-  <div class="om-in" style="margin-top:72px;margin-bottom:14px;display:flex;align-items:center;gap:0">
-    <div class="tv pagetitle" style="font-size:30px;font-weight:600;letter-spacing:-.015em;text-transform:uppercase;line-height:.98;flex:none">Mappings</div>
+  <div class="om-in" style="margin-top:72px;margin-bottom:22px;display:flex;align-items:center;gap:0">
+    <div class="tv pagetitle" style="font-size:20px;font-weight:600;letter-spacing:-.015em;text-transform:uppercase;line-height:.98;flex:none">Mappings</div>
     <div style="flex:1;display:flex;align-items:center;margin-left:-14px">
       <svg width="60" height="14" viewBox="0 0 60 14" fill="none" style="display:block;overflow:visible">
         <path d="M2 7 L20 5 L40 6.4 L58 6.4 L40 7.6 L20 6.9 Z" fill="#efece7" fill-opacity="0.82"></path>
       </svg>
     </div>
   </div>
-  <div class="om-in" style="animation-delay:.05s;font-size:13px;line-height:1.7;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.62)"><div>Andrea Balency-Béarn, 2026</div><div style="margin-top:18px">For ensemble &amp; electronics<br>Performed by Plus-Minus Ensemble</div><div style="margin-top:14px">Recorded at Empire Broadcasting Corporation<br>Directed by Anna Francesca Jennings</div></div>
 
-  <div class="om-in" style="animation-delay:.12s;margin-top:56px;margin-bottom:16px;font-size:15px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.8)">Performance Film</div>
+  <div class="om-in" style="animation-delay:.07s;margin-bottom:26px;max-width:680px;font-size:13px;font-weight:600;line-height:1.7;letter-spacing:.01em;color:rgba(239,236,231,.78)">Through self-regulating systems in which performed sound, electronics and score are interconnected in real time, MAPPINGS takes three field recordings, one made in London and two in Mexico City, as raw materials which are mapped onto the ensemble over the course of the piece. Performed by Plus-Minus Ensemble, recorded at The Empire Studio and filmed by Anna Francesca Jennings.</div>
+  <div class="om-in" style="animation-delay:.1s;margin-bottom:40px;font-size:13px;line-height:1.9;letter-spacing:.02em;color:rgba(239,236,231,.72)">Music by Andrea Balency-Béarn<br>Performed by Plus-Minus Ensemble</div>
   <div class="om-in" style="animation-delay:.14s">
     <div class="videowrap">
       <video controls controlsList="nodownload noplaybackrate noremoteplayback" disablePictureInPicture disableRemotePlayback preload="auto" playsinline src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/Mappings_compressed.mp4#t=0.1"></video>
       <button class="vplay" aria-label="Play video"><span class="disc"><svg width="30" height="34" viewBox="0 0 30 34" fill="#0a0908"><path d="M2 2 L28 17 L2 32 Z"></path></svg></span></button>
     </div>
-  </div>
-
-  <div class="om-in desc" style="animation-delay:.17s;margin-top:44px;max-width:680px;font-size:15px;font-weight:400;line-height:1.75;letter-spacing:.01em;color:rgba(239,236,231,.74)">
-    <p>Mappings brings together three years of research into self-regulating systems for electroacoustic composition and performance. In these systems (which I build with software like Max and IanniX) performed sound, electronics and score become interconnected in real time, creating a performance environment where sound parameters, such as the loudness of an instrument, can have an effect on time or timbre, like the pace of the score. This in turn affects other players and the sound that goes back into the system, generating feedback loops which feed into each other over the course of the piece.</p>
-    <p style="margin-top:20px">Compositional control is not given up, but recalibrated: rather than imposing a structure on the music from outside, I develop each system around the particularities of the musical material itself, experimenting with it in real time and constraining it as I go.</p>
-    <p style="margin-top:20px">The performers interact with it through the moving score, which translates the system’s processes into visuals. What the performers are seeing can be glimpsed in the performance film.</p>
   </div>
 
   <div class="om-in" style="animation-delay:.2s;margin-top:72px;margin-bottom:16px;font-size:15px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,236,231,.8)">Studio Recording</div>
@@ -121,6 +117,26 @@
       <audio preload="metadata" src="https://pub-3ab50421169d454f97bf75de01d58765.r2.dev/mappings%2003.mp3"></audio>
     </div>
   </div>
+  <div class="om-in" style="animation-delay:.2s;margin-top:72px;max-width:680px;font-size:13px;line-height:1.9;letter-spacing:.02em;color:rgba(239,236,231,.62)">
+    Conductor and Piano Transducers: Mark Knoop<br>
+    Piano and Keyboard: Roderick Chadwick<br>
+    Electric Guitar: Tom Pauwels<br>
+    Clarinets, Slide Whistle: Vicky Wright<br>
+    Percussion, No-Input Mixer: Elsa Bradley<br>
+    Violin: Mira Benjamin<br>
+    Violoncello: Alice Purton<br>
+    Second Piano Transducer: Adam Hodges<br>
+    Directed by Anna Francesca Jennings<br>
+    Second Camera: Richard Perryman<br>
+    DOP / Editor: Anna Francesca Jennings<br>
+    Recording Studio: Empire Broadcasting Corporation<br>
+    Sound Engineer: Jonathan Hucks<br>
+    Assistant Engineer: Riley Spencer<br>
+    Studio Producer: Navid Gornall<br>
+    With special thanks to: Jonathan Freeman-Attwood and Louisa Rosi
+  </div>
+  <div class="om-in" style="animation-delay:.28s;margin-top:30px;max-width:560px;font-size:11.5px;line-height:1.65;color:rgba(239,236,231,.42)">This recording has been made possible by the Royal Academy of Music’s Young Artists’ Recording Scheme, which is generously supported by The Gatsby Charitable Foundation.</div>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
