@@ -24,16 +24,36 @@
   .tv{text-shadow:1.1px 0 rgba(255,50,90,.6),-1.1px 0 rgba(0,178,255,.55),0 0 10px rgba(255,255,255,.14);animation:tvFlicker 5s steps(60) infinite}
   .home-nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
 
+  /* --- MAPPINGS release block (left column) --- */
+  .home-release{position:absolute;left:22px;top:50%;transform:translateY(calc(-50% + 10.5px));width:386px;max-height:calc(100vh - 246px);overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
+  .home-release::-webkit-scrollbar{display:none}
+  .rl-title{font-size:15px;font-weight:600;line-height:1.1;text-transform:uppercase}
+  .rl-links{margin-top:13px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+  .rl-link{display:inline-block;font-size:12px;font-weight:500;text-transform:uppercase;color:rgba(239,236,231,.88);border-bottom:1px solid rgba(239,236,231,.3);padding-bottom:3px;transition:transform .55s cubic-bezier(.16,.8,.28,1),color .3s ease,border-color .3s ease;text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)}
+  .rl-link:hover{transform:translateX(6px);color:#efece7;border-color:rgba(239,236,231,.75)}
+  .rl-text{margin-top:18px;font-size:11px;font-weight:500;line-height:1.6;color:rgba(239,236,231,.84)}
+  .rl-credits{margin-top:18px;font-size:10.5px;font-weight:400;line-height:1.55;color:rgba(239,236,231,.62)}
+  .rl-credits p{margin-bottom:0}
+  .rl-credits p:last-child{margin-bottom:0}
+  .rl-note{margin-top:13px;font-size:9.5px;line-height:1.5;color:rgba(239,236,231,.44)}
+  .home-release.is-scroll{-webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 30px),transparent 100%);mask-image:linear-gradient(180deg,#000 calc(100% - 30px),transparent 100%)}
+
   @media (max-width:768px){
     .mbr{display:block!important;width:0!important;height:0!important;overflow:hidden!important}
     .om-frame{height:100svh!important}
     .home-name{left:20px!important;top:18px!important}
     .home-name a{font-size:27px!important}
-    .home-nav{top:50%!important;bottom:auto!important;right:20px!important;transform:translateY(-50%)!important;flex-direction:column!important;align-items:flex-end!important;gap:8px!important;text-align:right!important}
+    /* nav sits under the name, left aligned, one tier smaller */
+    .home-nav{top:92px!important;bottom:auto!important;left:20px!important;right:auto!important;transform:none!important;flex-direction:row!important;align-items:flex-start!important;justify-content:flex-start!important;gap:18px!important;text-align:left!important;font-size:11px!important;font-weight:400!important;text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)!important}
     .home-nav a{line-height:1.2!important}
-    .home-nav{text-shadow:0.5px 0 rgba(255,50,90,.4),-0.5px 0 rgba(0,178,255,.35)!important}
-    .home-actions{grid-template-columns:1fr!important;left:20px!important;right:20px!important;bottom:30px!important;gap:14px!important}
-    .home-actions a{text-align:left!important;font-size:17px!important;padding:14px 0!important;margin:0!important}
+    .home-actions{grid-template-columns:1fr!important;left:20px!important;right:20px!important;width:auto!important;bottom:30px!important;gap:14px!important}
+    .home-actions a{text-align:left!important;font-size:14px!important;padding:14px 0!important;margin:0!important}
+    /* release block: centred above the bottom cluster */
+    .home-release{left:20px!important;right:20px!important;width:auto!important;top:50%!important;transform:translateY(calc(-50% - 52px))!important;max-height:calc(100svh - 300px)!important}
+    /* credits move to the film page on phones */
+    .rl-credits{display:none!important}
+    .rl-text{font-size:12.5px!important}
+    .rl-credits{font-size:12px!important}
   }
 </style>
 </helmet>
@@ -41,6 +61,8 @@
   <!-- full-bleed media -->
   <video src="assets/hero2.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;opacity:0;transition:opacity 1.4s ease"></video>
   <div style="position:absolute;inset:0;background:{{ overlayFade }}"></div>
+  <!-- left scrim: keeps the credits legible over the moving image. Delete this div to remove. -->
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(10,9,8,.72) 0%,rgba(10,9,8,.5) 28%,rgba(10,9,8,0) 46%)"></div>
   <!-- name -->
   <div class="home-name" style="position:absolute;left:22px;top:16px">
     <a class="tv" href="index.html" style="display:inline-block;font-size:40px;font-weight:600;letter-spacing:{{ nameTracking }};line-height:1.1;text-transform:uppercase">Andrea<br>Balency-Béarn</a>
@@ -50,6 +72,22 @@
     <a class="act" href="about.html">About / Contact</a>
     <a class="act" href="https://www.instagram.com/andreabalencybearn/" target="_blank" rel="noopener">Instagram</a>
   </nav>
+  <!-- MAPPINGS release block -->
+  <div class="home-release">
+    <div class="rl-title tv" style="letter-spacing:{{ labelTracking }}">MAPPINGS</div>
+    <div class="rl-links">
+      <a class="rl-link" href="mappings.html" style="letter-spacing:{{ labelTracking }}">Watch film →</a>
+      <a class="rl-link" href="https://youtu.be/lQVvyjIcPNQ" target="_blank" rel="noopener" style="letter-spacing:{{ labelTracking }}">Watch on YouTube →</a>
+    </div>
+    <p class="rl-text">Through self-regulating systems in which performed sound, electronics and score are interconnected in real time, MAPPINGS takes three field recordings, one made in London and two in Mexico City, as raw materials which are mapped onto the ensemble over the course of the piece. Performed by Plus-Minus Ensemble, recorded at The Empire Studio and filmed by Anna Francesca Jennings.</p>
+    <div class="rl-credits">
+      <p>Music by Andrea Balency-Béarn<br>Performed by Plus-Minus Ensemble</p>
+      <p>Conductor and Piano Transducers: Mark Knoop<br>Piano and Keyboard: Roderick Chadwick<br>Electric Guitar: Tom Pauwels<br>Clarinets, Slide Whistle: Vicky Wright<br>Percussion, No-Input Mixer: Elsa Bradley<br>Violin: Mira Benjamin<br>Violoncello: Alice Purton<br>Second Piano Transducer: Adam Hodges</p>
+      <p>Directed by Anna Francesca Jennings</p>
+      <p>Second Camera: Richard Perryman<br>DOP / Editor: Anna Francesca Jennings</p>
+      <p>Recording Studio: Empire Broadcasting Corporation<br>Sound Engineer: Jonathan Hucks<br>Assistant Engineer: Riley Spencer<br>Studio Producer: Navid Gornall</p>
+    </div>
+  </div>
   <!-- three options along the bottom -->
   <div class="home-actions" style="position:absolute;left:56px;right:56px;bottom:46px;display:grid;grid-template-columns:1fr 1fr 1fr">
     <a class="act tv" href="film.html" style="display:block;padding:20px 12px;text-align:center;font-size:15px;font-weight:400;letter-spacing:{{ labelTracking }};text-transform:uppercase">Film Music</a>
@@ -68,8 +106,17 @@
     this._playHero();
     this._t = setInterval(() => this._playHero(), 800);
     setTimeout(() => { clearInterval(this._t); }, 6000);
+    this._fade = () => {
+      const el = document.querySelector('.home-release');
+      if (!el) return;
+      el.classList.toggle('is-scroll', el.scrollHeight - el.clientHeight > 2);
+    };
+    this._fade();
+    setTimeout(this._fade, 1200);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(this._fade);
+    window.addEventListener('resize', this._fade);
   }
-  componentWillUnmount() { clearInterval(this._t); }
+  componentWillUnmount() { clearInterval(this._t); window.removeEventListener('resize', this._fade); }
   _playHero() {
     const v = document.querySelector('.om-frame video');
     if (!v) return;
